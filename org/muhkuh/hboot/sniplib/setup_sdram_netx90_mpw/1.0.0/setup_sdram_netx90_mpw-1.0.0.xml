@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="setup_sdram_netx90_mpw" group="org.muhkuh.hboot.sniplib" version="1.0.0">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GIT1.0.0-3dba3b545165" url="https://github.com/muhkuh-sys/org.muhkuh.hboot.sniplib-setup_sdram.git"/>
+		<Description>Setup the SDRAM on a netX90 MPW.</Description>
+		<Category>netx90MPW</Category>
+		<Category>booting</Category>
+		<Category>SDRAM</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="GENERAL_CTRL">The general control value.</Parameter>
+		<Parameter name="TIMING_CTRL">The timing control value.</Parameter>
+		<Parameter name="MODE_REGISTER">The mode register value.</Parameter>
+		<Parameter name="SDRAM_DATA_START">The start address of the SDRAM data area.</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Load the show_hwconfig program. --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x000200c0&quot;&gt;
+2de9f843dff8e4c0314d064698460c461746e0470020a8472e4b06f170469e42
+52d8c4f30223c4f301124ff400664ff480709840964004f003030221994000fb
+06f614f4803e244814bf0223012301fb06f103fb01f100f1780302e008309842
+2fd202689142f9d843685a1c29d01b4a1b48d2f8c060c2f8c060bef1000f0cbf
+8022a0221749dff86890b8f1000f43ea020308bf4ff0330800220b600260124b
+4760c0f80880046004469847064602e023685b000ad430464ff47a71c8470028
+f6d00220a847fee7bde8f883bde8f883b5010200fcffff0f14020200001240ff
+401540ff801440fff5010200dd01020001020200012808d00228074b0cbf4ff0
+80720022c3f894207047034b4ff00072c3f89420704700bf001240ff034b044a
+9a604ff02042da60704700bf101600ff3f420f00014b1868704700bf101600ff
+034b1b68181a884234bf002001207047101600ff000800000000000000100000
+0001000000200000000200000040000000030000008000000004000000000100
+0005000000000200000600000000040000070000000008000008000000001000
+0009000000002000000a000000004000000b000000008000000c000000000001
+000d000000000002000e0000
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x000200c1&lt;/Address&gt;
+	&lt;R0&gt;%%SDRAM_DATA_START%%&lt;/R0&gt;
+	&lt;R1&gt;%%GENERAL_CTRL%%&lt;/R1&gt;
+	&lt;R2&gt;%%TIMING_CTRL%%&lt;/R2&gt;
+	&lt;R3&gt;%%MODE_REGISTER%%&lt;/R3&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
