@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="mpu_sqirom_netx4000" group="org.muhkuh.hboot.sniplib" version="1.0.0">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GIT679c7e2bb103" url="https://github.com/muhkuh-sys/org.muhkuh.hboot.sniplib-netx4000_mpu_sqirom.git"/>
+		<Description>Update the MPU configuration to allow code execution from SQIROM area.</Description>
+		<Category>netx4000</Category>
+		<Category>hardware configuration</Category>
+		<Category>mpu</Category>
+	</Info>
+	<Snippet>&lt;Data&gt;
+	&lt;Hex address=&quot;0x04000000&quot;&gt;
+0f402de9100f11ee0100c0e30400c0e3020bc0e3010ac0e3020ac0e30204c0e3
+4ff07ff5100f01ee6ff07ff5d51f07ee0000a0e3120f06ee0000a0e3110f06ee
+310f06ee310ea0e3910f06eeb10f06ee3f00a0e3510f06ee710f06ee0100a0e3
+120f06ee0000a0e3110f06ee310f06ee98029fe5910f06eeb10f06ee2300a0e3
+510f06ee710f06ee0200a0e3120f06ee0103a0e3110f06ee310f06ee6c029fe5
+910f06eeb10f06ee3300a0e3510f06ee710f06ee0300a0e3120f06ee4106a0e3
+110f06ee310f06ee44029fe5910f06eeb10f06ee2100a0e3510f06ee710f06ee
+0400a0e3120f06ee0102a0e3110f06ee310f06ee18029fe5910f06eeb10f06ee
+3500a0e3510f06ee710f06ee0500a0e3120f06ee0202a0e3110f06ee310f06ee
+e8019fe5910f06eeb10f06ee3900a0e3510f06ee710f06ee0600a0e3120f06ee
+0101a0e3110f06ee310f06eebc019fe5910f06eeb10f06ee3b00a0e3510f06ee
+710f06ee0700a0e3120f06ee0201a0e3110f06ee310f06ee90019fe5910f06ee
+b10f06ee3b00a0e3510f06ee710f06ee0800a0e3120f06ee0000a0e3110f06ee
+310f06ee0000a0e3910f06eeb10f06ee0000a0e3510f06ee710f06ee0900a0e3
+120f06ee0000a0e3110f06ee310f06ee0000a0e3910f06eeb10f06ee0000a0e3
+510f06ee710f06ee0a00a0e3120f06ee0000a0e3110f06ee310f06ee0000a0e3
+910f06eeb10f06ee0000a0e3510f06ee710f06ee0b00a0e3120f06ee0000a0e3
+110f06ee310f06ee0000a0e3910f06eeb10f06ee0000a0e3510f06ee710f06ee
+0c00a0e3120f06ee0000a0e3110f06ee310f06ee0000a0e3910f06eeb10f06ee
+0000a0e3510f06ee710f06ee0d00a0e3120f06ee0000a0e3110f06ee310f06ee
+0000a0e3910f06eeb10f06ee0000a0e3510f06ee710f06ee0e00a0e3120f06ee
+0000a0e3110f06ee310f06ee0000a0e3910f06eeb10f06ee0000a0e3510f06ee
+710f06ee0f00a0e3120f06ee0000a0e3110f06ee310f06ee0000a0e3910f06ee
+b10f06ee0000a0e3510f06ee710f06ee100f11ee010080e3020b80e34ff07ff5
+100f01ee6ff07ff50f40bde81eff2fe10b0300000b060000
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x04000000&lt;/Address&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
