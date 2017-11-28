@@ -3,7 +3,7 @@
 	<Info artifact="disable_redundancy_pages_netx90mpw" group="com.hilscher.hw.util.netx90" version="1.0.0">
 		<License name="GPL-2.0"/>
 		<Author name="Hilscher Gesellschaft für Systemautomation" url="https://github.com/muhkuh-sys"/>
-		<VCS id="GITedb843b76b03" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-disable_redundancy_pages.git"/>
+		<VCS id="GIT1.0.0-0-gedb843b76b03" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-disable_redundancy_pages.git"/>
 		<Description>Disable the redundancy pages of all Intflash units on the netX90 MPW.</Description>
 		<Category>netx90</Category>
 		<Category>booting</Category>
