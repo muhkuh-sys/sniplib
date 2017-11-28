@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="disable_redundancy_pages_netx90mpw" group="com.hilscher.hw.util.netx90" version="1.0.0">
+		<License name="GPL-2.0"/>
+		<Author name="Hilscher Gesellschaft für Systemautomation" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITedb843b76b03" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-disable_redundancy_pages.git"/>
+		<Description>Disable the redundancy pages of all Intflash units on the netX90 MPW.</Description>
+		<Category>netx90</Category>
+		<Category>booting</Category>
+		<Category>DPM</Category>
+	</Info>
+	<ParameterList/>
+	<Snippet>&lt;!-- Load the disable_redundancy_pages program. --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x000200c0&quot;&gt;
+0d480e490e4a0f4b43634b6353630d4b83638b639363bff34f8fbff36f8f094b
+03630b631363084b03630b631363bff34f8fbff36f8f7047001c00ff801c00ff
+001440ff0100000000000000
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x000200c1&lt;/Address&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
