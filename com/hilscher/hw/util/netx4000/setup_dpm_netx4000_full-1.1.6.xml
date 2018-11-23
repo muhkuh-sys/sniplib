@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <HBootSnippet>
-	<Info artifact="setup_dpm_netx4000_full" group="com.hilscher.hw.util" version="1.1.7">
+	<Info artifact="setup_dpm_netx4000_full" group="com.hilscher.hw.util" version="1.1.6">
 		<License name="GPL-2.0"/>
 		<Author name="Hilscher Gesellschaft fuer Systemautomation" url="https://github.com/muhkuh-sys"/>
-		<VCS id="GIT481c7d09a447" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-setup_dpm.git"/>
+		<VCS id="GITc0522523b77f+" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-setup_dpm.git"/>
 		<Description>Setup the DPM on a netX4000 FULL. The strapping options determine if the parallel DPM, serial DPM or DPM via PCI express should be configured.</Description>
 		<Category>netx4000</Category>
 		<Category>booting</Category>
@@ -11,7 +11,7 @@
 	</Info>
 	<ParameterList/>
 	<Snippet>&lt;!-- Load the setup_dpm program. 
-1.1.7.GIT481c7d09a447 --&gt;
+1.1.6.GITc0522523b77f+ --&gt;
 &lt;Data&gt;
 	&lt;Hex address=&quot;0x04000000&quot;&gt;
 08b540f200034bf20402c0f21043c0f210021b6a934206d040f6f5730220c0f2
