@@ -3,6 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hilscher.hw.util.netx4000</groupId>
 	<artifactId>read_rotaryswitch</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>xml</packaging>
 </project>

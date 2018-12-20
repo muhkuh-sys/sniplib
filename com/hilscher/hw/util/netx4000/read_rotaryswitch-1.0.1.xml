@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <HBootSnippet>
-	<Info artifact="read_rotaryswitch" group="com.hilscher.hw.util.netx4000" version="1.0.0">
+	<Info artifact="read_rotaryswitch" group="com.hilscher.hw.util.netx4000" version="1.0.1">
 		<License name="GPL-2.0"/>
 		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
-		<VCS id="GITV1.0.0-0-gae4eb00a3735" url="https://github.com/muhkuh-sys/com.hilscher.hw.util.netx4000.read_rotaryswitch.git"/>
+		<VCS id="GITV1.0.1-0-g6013f4f0b3ed" url="https://github.com/muhkuh-sys/com.hilscher.hw.util.netx4000.read_rotaryswitch.git"/>
 		<Description>Read rotary switches make them available on netX4000.</Description>
 		<Category>netx4000</Category>
 		<Category>booting</Category>
 	</Info>
 	<ParameterList>
-		<Parameter default="0x0400001a" name="CONFIGURATION_ADDRESS">The address of the hardware config.</Parameter>
-		<Parameter name="MMIO_SELECT">Handover parameter for parsing mmios.</Parameter>
+		<Parameter name="TARGET_ADDRESS">Address to write to the value from the rotaty switch.</Parameter>
+		<Parameter name="MMIO_SELECT">MMIO selection used for rotary switch to be read in.</Parameter>
 	</ParameterList>
-	<Snippet>&lt;!-- Load the apply_hwconfig program. 
-1.0.0.GITV1.0.0-0-gae4eb00a3735 --&gt;
+	<Snippet>&lt;!-- Load the read_rotaryswitch program. 
+1.0.1.GITV1.0.1-0-g6013f4f0b3ed --&gt;
 &lt;Data&gt;
 	&lt;Hex address=&quot;0x04020000&quot;&gt;
-01000000000000000000000047495456312e302e302d302d67616534f0b41824
+01000000000000000100000047495456312e302e312d302d67363031f0b41824
 002621fa04f34ff4c162dbb2cff20842ff2b4fea531503f01f074fea85052a44
 a4f108041fbf5368fb4003f0010343ea460618bff6b214f1080fe2d10670f0bc
 704700bf
@@ -24,7 +24,7 @@ a4f108041fbf5368fb4003f0010343ea460618bff6b214f1080fe2d10670f0bc
 &lt;/Data&gt;
 &lt;Execute&gt;
 	&lt;Address&gt;0x0402001d&lt;/Address&gt;
-	&lt;R0&gt;%%CONFIGURATION_ADDRESS%%&lt;/R0&gt;
+	&lt;R0&gt;%%TARGET_ADDRESS%%&lt;/R0&gt;
 	&lt;R1&gt;%%MMIO_SELECT%%&lt;/R1&gt;
 &lt;/Execute&gt;
 </Snippet>
