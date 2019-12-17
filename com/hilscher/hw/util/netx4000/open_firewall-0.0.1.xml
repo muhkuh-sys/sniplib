@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="open_firewall" group="com.hilscher.hw.util.netx4000" version="0.0.1">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITV0.0.1-0-g4cbeeffd17f8" url="https://github.com/muhkuh-sys/com.hilscher.hw.util.netx4000.open_firewall.git"/>
+		<Description>open firewalls at netX4000.</Description>
+		<Category>netx4000</Category>
+		<Category>booting</Category>
+	</Info>
+	<Snippet>&lt;!-- open firewalls at netX 4000. 
+0.0.1.GITV0.0.1-0-g4cbeeffd17f8 --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x04001000&quot;&gt;
+0f402de9cc209fe5cc009fe5ff10a0e3003092e5003082e5001080e5bc009fe5
+ff10a0e3003092e5003082e5001080e5ac009fe5ff10a0e3003092e5003082e5
+001080e59c009fe5ff10a0e3003092e5003082e5001080e58c009fe5ff10a0e3
+003092e5003082e5001080e57c009fe5ff10a0e3003092e5003082e5001080e5
+6c009fe5ff10a0e3003092e5003082e5001080e55c009fe5ff10a0e3003092e5
+003082e5001080e54c009fe5ff10a0e3003092e5003082e5001080e53c009fe5
+ff10a0e3003092e5003082e5001080e50f40bde81eff2fe17c0108f4b00108f4
+b40108f4b80108f4bc0108f4c00108f4c40108f4c80108f4cc0108f4d00108f4
+d40108f4
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x04001000&lt;/Address&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
