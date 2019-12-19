@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="apply_asic_ctrl" group="com.hilscher.hw.util.netx4000" version="1.0.1">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITV1.0.1-0-gfdc0e0b54ea1" url="https://github.com/muhkuh-sys/com.hilscher.hw.util-apply_asic_ctrl_netx4000.git"/>
+		<Description>configure special asic_ctrl register at netX4000.</Description>
+		<Category>netx4000</Category>
+		<Category>booting</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="PTR_INPUT">Pointer to the new asic_ctrl register values.</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Load the apply_asic_ctrl program. 
+1.0.1.GITV1.0.1-0-gfdc0e0b54ea1 --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x04001000&quot;&gt;
+0f402de940109fe5002090e57c3091e57c3081e5002081e5042090e57c3091e5
+7c3081e5082081e5082090e5383091e5032082e17c3091e57c3081e5382081e5
+4ff07ff50f40bde81eff2fe1000108f4
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x04001000&lt;/Address&gt;
+	&lt;R0&gt;%%PTR_INPUT%%&lt;/R0&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
