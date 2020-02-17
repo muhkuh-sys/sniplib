@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="aifxv2_detect" group="com.hilscher.hw.util.netx90" version="1.0.0">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITV1.0.0-0-g607123e5d0f0" url="https://github.com/muhkuh-sys/com.hilscher.hw.util.netx90.aifxV2_detect"/>
+		<Description>Read ID from AIFX V2 module available on netX90</Description>
+		<Category>netx90</Category>
+		<Category>booting</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="TARGET_ADDRESS">Address to write to the ID from the connected AIFX V2 module.</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Load the aifxV2 detect program. 
+1.0.0.GITV1.0.0-0-g607123e5d0f0 --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x000200c0&quot;&gt;
+01000000000000000000000047495456312e302e302d302d673630372a4b2b4a
+d3f8c01030b4c3f8c01050219161d3f8c040c3f8c040d161d3f8c040c3f8c040
+5165d3f8c010c3f8c010214a214c4ff008211961126b204984b0c2f38015c2f3
+800200950192d3f8c020c3f8c0204ff010121a60d3f8c020c3f8c0209c669a6e
+02920a6cc2f340020392d3f8c020c3f8c0204ff088729a66039b93b1009b4bb9
+019a002a14bf502230220280438004b030bc7047019b002b14bf702240220023
+f3e780231a46f0e7001240ff001040ff801000ff10011001001411ff
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x000200dd&lt;/Address&gt;
+	&lt;R0&gt;%%TARGET_ADDRESS%%&lt;/R0&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
