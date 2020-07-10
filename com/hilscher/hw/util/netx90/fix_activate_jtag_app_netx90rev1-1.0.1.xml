@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="fix_activate_jtag_app_netx90rev1" group="com.hilscher.hw.util.netx90" version="1.0.1">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITV1.0.1-0-g9c9f19691d50" url="https://bitbucket.hilscher.com/scm/nxt/nxt.snip.fix_activate_jtag_app_netx90rev1.git"/>
+		<Description>Activate JTAG debugging.</Description>
+		<Category>netx90</Category>
+		<Category>booting</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="UC_ACTIVATE">If value evaluates to `true` enables the function of this snippet</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Load the patch fix activate jtag app side netX90 rev1
+1.0.1.GITV1.0.1-0-g9c9f19691d50 --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x0007f000&quot;&gt;
+01000000000000000100000047495456312e302e312d302d67396339134a144b
+1268db6ad10748bf43f00103900748bf43f00203510748bf43f00403100748bf
+43f00803d10648bf43f01003900648bf43f02003510648bf43f040031206044a
+48bf43f40073d362704700bf0c000920801600ff144a154b1268db6ad00748bf
+43f08003910748bf43f480735207104a126848bf43f48063d00748bf43f00103
+910748bf43f00203500748bf43f00403110748bf43f00803d206044a48bf43f0
+1003d362704700bf18000920801600ff0c000920024ad36a43f48033d3627047
+801600ff00b9704708b5fff797fffff7c1ff034ad36a43f48033d36208bd00bf
+801600ff
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x0007f0e5&lt;/Address&gt;
+	&lt;R0&gt;%%UC_ACTIVATE%%&lt;/R0&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
