@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="SCPY_ONLY_PORN" group="com.hilscher.hw.util.netx90" version="0.0.3">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GIT8d9748340afb" url="https://bitbucket.hilscher.com/scm/nxt/nxt.snip.scpy_only_porn.git"/>
+		<Description>Software snippet: SCPY_ONLY_PORN copies a value into register asic_ctrl_com.only_porn @0xff0016b4</Description>
+		<Category>netx90</Category>
+		<Category>booting</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="SOURCE">Source address</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Software snippet SCPY_ONLY_PORN to be used together with BootSwitch 
+0.0.3.GIT8d9748340afb --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x00022000&quot;&gt;
+0fb40a4b196821f0ff0121f46061026802f0ff0002f4606242ea000242ea0101
+034a1068106019600fbc7047b41600ffc01240ff
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x00022001&lt;/Address&gt;
+	&lt;R0&gt;%%SOURCE%%&lt;/R0&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
