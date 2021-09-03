@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBootSnippet>
+	<Info artifact="BootSwitch" group="com.hilscher.hw.util.netx90" version="1.0.2">
+		<License name="GPL-2.0"/>
+		<Author name="Muhkuh team" url="https://github.com/muhkuh-sys"/>
+		<VCS id="GITV1.0.2-0-gec97ccacc78d" url="https://bitbucket.hilscher.com/scm/nxt/nxt.snip.bootswitch.git"/>
+		<Description>Software BootSwitch to replace dipswitch function in software</Description>
+		<Category>netx90</Category>
+		<Category>booting</Category>
+	</Info>
+	<ParameterList>
+		<Parameter name="ADDR_TRANSLATER_TABLE">Address to point to the BootMode structure, which is used to select and protect the select value.</Parameter>
+		<Parameter name="ADDR_RESULT">Address for result. Look at spec for interpreting values.</Parameter>
+	</ParameterList>
+	<Snippet>&lt;!-- Software BootSwitch to replace dipswitch function in software
+1.0.2.GITV1.0.2-0-gec97ccacc78d --&gt;
+&lt;Data&gt;
+	&lt;Hex address=&quot;0x00022010&quot;&gt;
+47495456312e302e322d302d6765633937636361636337386400000000000000
+010002007fb56c46094dad4610b4094c094dac4205dd4ff0000644f8046bac42
+fbd400f00bf810bca546bde87f407047004002008c2102008c21020010b540b3
+344b35491b6813f4000f14bf4ff4802200228b4228d09bb2b3f5877f19d302f5
+ff3202f2ad122d4b1b6803f00f018c1e012c45d904291cd0294a284910681060
+23f4606343f400730b6010bd254810219047224a224913680868086023f46063
+43f48063136010bd02f5b13202f26912d9e7c3f30311415c0729e7d801a050f8
+21f000bfa9200200312102003d21020037210200bd200200bd200200bd200200
+152102001048082190470c4a0c4913680868086023f4606343f40073136010bd
+08481021f0e709480821ede708480821eae700bf981240ff0d010009b41600ff
+c01240ff7c210200642102006c21020074210200120a00001501000012020000
+15010000120100001501000014010100010100000000000000150000
+	&lt;/Hex&gt;
+&lt;/Data&gt;
+&lt;Execute&gt;
+	&lt;Address&gt;0x00022035&lt;/Address&gt;
+	&lt;R0&gt;%%ADDR_TRANSLATER_TABLE%%&lt;/R0&gt;
+	&lt;R1&gt;%%ADDR_RESULT%%&lt;/R1&gt;
+&lt;/Execute&gt;
+</Snippet>
+</HBootSnippet>
